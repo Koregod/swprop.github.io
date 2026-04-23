@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Образ врага: советская пропаганда 1941–1945 | Интерактивный журнал</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Fonts + плакатный стиль -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="bg-wrap">
+        <div class="bg">
+            <div class="site-wrapper">
+                <!-- header с генератором цитат -->
+                <div class="hero-header">
+                        <div class="bg-opacity"></div>
+                        <div class="container">
+                            <div class="brand">
+                                <h1>ОБРАЗ ВРАГА</h1>
+                                <p class="ru-text">Советская пропаганда · 1941–1945</p>
+                                <p class="en-text">ENEMY IMAGE · Soviet propaganda 1941–1945</p>
+                            </div>
+                            <div class="quote-generator">
+                                <div class="quote-text" id="quoteDisplay">«Убей немца — это молитва твоей матери»</div>
+                                <div class="quote-author" id="quoteAuthor">— Илья Эренбург</div>
+                                <button class="btn-quote" id="newQuoteBtn"><i class="fas fa-redo-alt"></i> <span class="ru-text">Цитата дня</span><span class="en-text">Quote of day</span></button>
+                            </div>
+                            <div class="lang-switch" id="langToggle">
+                                <i class="fas fa-language"></i> English / Рус
+                            </div>
+                        </div>
+                </div>
+                <!-- стилизованные гиперссылки меню -->
+                <div class="nav-links">
+                    <a href="#propaganda"><i class="fas fa-newspaper"></i> <span class="ru-text">Печать и радио</span><span class="en-text">Press & Radio</span></a>
+                    <a href="#visual"><i class="fas fa-palette"></i> <span class="ru-text">Плакат / Кино</span><span class="en-text">Poster & Film</span></a>
+                    <a href="#literature"><i class="fas fa-feather-alt"></i> <span class="ru-text">Литература</span><span class="en-text">Literature</span></a>
+                    <a href="#allies"><i class="fas fa-handshake"></i> <span class="ru-text">Союзники</span><span class="en-text">Allies</span></a>
+                    <a href="#docs"><i class="fas fa-video"></i> <span class="ru-text">Документальное кино</span><span class="en-text">Doc films</span></a>
+                </div>
+
+                <!-- Модульная структура: карточки с интерактивом, лайки, ссылки -->
+                <div class="container">
+                    <!-- секция печать / радио -->
+                    <div id="propaganda">
+                        <h2 class="section-title"><span class="ru-text">📰 ГОЛОС ОТЕЧЕСТВЕННОЙ ВОЙНЫ</span><span class="en-text">📰 VOICE OF THE WAR</span></h2>
+                        <div class="grid-cards">
+                            <!-- карточка 1: текст + ссылка + лайк -->
+                            <div class="card" data-id="card1">
+                                <div class="card-media">
+                                    <img src="./img/ЗАГЛУШКА.png" alt="Родина-мать зовет" style="width:100%; object-fit:cover;">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">«Смерть немецким оккупантам!»</span><span class="en-text">"Death to German occupiers!"</span></div>
+                                    <div class="card-desc">
+                                        <span class="ru-text">С 1941 года газета «Красная звезда» формировала образ врага-зверя. Переломный момент — директива №278, снявшая лозунг «Пролетарии всех стран...»</span>
+                                        <span class="en-text">Since 1941, Krasnaya Zvezda shaped the beast-image of the enemy. Directive No.278 removed 'Workers of the world unite'.</span>
+                                    </div>
+                                    <div class="like-container">
+                                        <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">124</span></button>
+                                    </div>
+                                    <a href="#" class="hyper-link" target="_blank"><i class="fas fa-external-link-alt"></i> <span class="ru-text">Читать статью «Правды» 1942</span><span class="en-text">Read Pravda 1942 article</span></a>
+                                </div>
+                            </div>
+                            <!-- карточка 2: аудио-пример (речь Левитана) -->
+                            <div class="card">
+                                <div class="card-media">
+                                    <i class="fas fa-microphone-alt" style="font-size: 3rem; color:#cc0f0f;"></i>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">Голос Левитана: Сводки</span><span class="en-text">Levitan's voice</span></div>
+                                    <div class="card-desc">
+                                        <span class="ru-text">Радиообращение Юрия Левитана — символ сопротивления. Прослушайте фрагмент сводки Совинформбюро.</span>
+                                        <span class="en-text">Yuri Levitan’s broadcasts — symbol of resistance. Listen to Sovinformburo digest.</span>
+                                    </div>
+                                    <audio controls style="width:100%; margin:10px 0;">
+                                        <source src="https://www.sovmusic.ru/m/levitan/levitan_1941_06_22.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">312</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-radio"></i> <span class="ru-text">Архив радиопередач</span><span class="en-text">Radio archive</span></a>
+                                </div>
+                            </div>
+                            <!-- карточка 3: визуальный образ плаката -->
+                            <div class="card">
+                                <div class="card-media">
+                                    <img src="./img/ЗАГЛУШКА.png" alt="Кукрыниксы плакат">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">Кукрыниксы: Сатира и гнев</span><span class="en-text">Kukryniksy: Satire & Fury</span></div>
+                                    <div class="card-desc"><span class="ru-text">За годы войны художники создали более 1000 плакатов, разоблачающих фашистского зверя.</span><span class="en-text">Over 1000 posters unmasking the fascist beast.</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">279</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-image"></i> <span class="ru-text">Галерея «Окон ТАСС»</span><span class="en-text">TASS Windows gallery</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- секция визуального (кино и карикатура) -->
+                    <div id="visual">
+                        <h2 class="section-title"><span class="ru-text">🎬 КИНОГЛАЗ: ВРАГ НА ЭКРАНЕ</span><span class="en-text">🎬 CINEMA: ENEMY ON SCREEN</span></h2>
+                        <div class="grid-cards">
+                            <div class="card">
+                                <div class="card-media">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/hXa3NPI1ypI?si=5Z8NJL5UAz-7LJpu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">«Александр Невский» (1938/1941)</span><span class="en-text">"Alexander Nevsky"</span></div>
+                                    <div class="card-desc"><span class="ru-text">Историческая параллель: немецкие псы-рыцари vs советский воин.</span><span class="en-text">Historical parallel: Teutonic knights vs Soviet warrior.</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">457</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-film"></i> <span class="ru-text">Смотреть хронику</span><span class="en-text">Watch chronicle</span></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-media">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQ6BqF6Y9Po?si=YkK-0j-QA2hTgXvV" title="кадр из фильма Радуга" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">«Радуга» (1944)</span><span class="en-text">"Rainbow" (1944)</span></div>
+                                    <div class="card-desc"><span class="ru-text">Образ врага-палача, лишённого человечности.</span><span class="en-text">Enemy as executioner, devoid of humanity.</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">321</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-theater-masks"></i> <span class="ru-text">Анализ фильма</span><span class="en-text">Film analysis</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- АУДИО-блок (стилизованный) + поэзия -->
+                    <div class="audio-block">
+                        <span><i class="fas fa-head-side-vr"></i> <span class="ru-text">Симонов читает «Убей его!»</span><span class="en-text">Simonov reads "Kill Him!"</span></span>
+                        <audio controls>
+                            <source src="https://www.sovmusic.ru/m/simonov/ubey_ego.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+
+                    <!-- литературный блок с интерактивными карточками -->
+                    <div id="literature">
+                        <h2 class="section-title"><span class="ru-text">📖 ПОЭЗИЯ И ПУБЛИЦИСТИКА МЕСТИ</span><span class="en-text">📖 POETRY OF REVENGE</span></h2>
+                        <div class="grid-cards">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-title">Илья Эренбург</div>
+                                    <div class="card-desc"><span class="ru-text">«Фашист — это не человек. Убей его — иначе убьют твою семью». Памфлет «Оправдание ненависти».</span><span class="en-text">"Fascist is not human. Kill him or he kills your family." Pamphlet "Justification of Hatred".</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">214</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-book-open"></i> <span class="ru-text">Читать статью 1942</span><span class="en-text">Read 1942 article</span></a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-title">Константин Симонов</div>
+                                    <div class="card-desc"><span class="ru-text">«Если дорог тебе твой дом» — манифест мести, напечатанный миллионами листовок.</span><span class="en-text">"If your home is dear to you" — manifesto of revenge.</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">308</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-quote-right"></i> <span class="ru-text">Полный текст стихотворения</span><span class="en-text">Full poem text</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Документальное кино на английском (нейронка / субтитры) -->
+                    <div id="docs">
+                        <h2 class="section-title"><span class="ru-text">🎥 ДОКУМЕНТАЛЬНЫЕ ФИЛЬМЫ (ENGLISH VOICE/AI)</span><span class="en-text">🎥 DOCUMENTARIES (ENGLISH / AI)</span></h2>
+                        <div class="video-docs">
+                            <div class="video-card">
+                                <iframe src="https://www.youtube.com/embed/z4rqKtO-76U?si=ukd2pJ_q_RwL1y9T" title="Soviet propaganda documentary english" frameborder="0" allowfullscreen></iframe>
+                                <div class="video-caption"><span class="ru-text">Разгром немецко-фашистских войск под Москвой (англ. озвучка)</span><span class="en-text">The defeat of Nazi troops near Moscow (English dub)</span></div>
+                            </div>
+                            <div class="video-card">
+                                <iframe src="https://www.youtube.com/embed/_r4NwZ9-LmU?si=rA8U9bElAQq4opQ9" title="Stalingrad doc english" frameborder="0" allowfullscreen></iframe>
+                                <div class="video-caption"><span class="ru-text">Сталинградская битва: хроника победы (AI enhanced English)</span><span class="en-text">Battle of Stalingrad: chronicle of victory (AI enhanced)</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- блок союзники -->
+                    <div id="allies">
+                        <h2 class="section-title"><span class="ru-text">🤝 ОБРАЗ СОЮЗНИКОВ: США и Британия</span><span class="en-text">🤝 ALLIES: USA & Britain</span></h2>
+                        <div class="grid-cards">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-title"><span class="ru-text">Ленд-лиз и «свободолюбивые народы»</span><span class="en-text">Lend-Lease & freedom-loving peoples</span></div>
+                                    <div class="card-desc"><span class="ru-text">С 1942 года советская пропаганда формировала позитивный образ союзников, но недоверие сохранялось.</span><span class="en-text">Since 1942 Soviet propaganda built a positive image of allies, yet distrust remained.</span></div>
+                                    <div class="like-container"><button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">187</span></button></div>
+                                    <a href="#" class="hyper-link"><i class="fas fa-globe-americas"></i> <span class="ru-text">Историческая справка</span><span class="en-text">Historical background</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проверили: добавлена Смирнова и другие (по заданию) -->
+                    <div class="supervisors">
+                        <div>
+                            <strong><span class="ru-text">Руководители проекта:</span><span class="en-text">Project supervisors:</span></strong><br>
+                            <span class="ru-text">Тюрин А.О., Глинчевский Э.И., Календр А.А., Смирнова Е.В.</span>
+                            <span class="en-text">Tyurin A.O., Glinchevsky E.I., Kalendr A.A., Smirnova E.V.</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle" style="color:#cc0f0f;"></i> <span class="ru-text">Междисциплинарный проект: История, английский, ИТ</span>
+                            <span class="en-text">Interdisciplinary project: History, English, IT</span>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <span class="ru-text">© 2026 | Образ врага в советской пропаганде | По материалам газет «Правда», «Красная звезда», плакатов Кукрыниксов</span>
+                    <span class="en-text">© 2026 | Enemy image in Soviet propaganda | Based on Pravda, Krasnaya Zvezda, Kukryniksy posters</span>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
